@@ -22,4 +22,5 @@ const WorkExperienceSection = forwardRef((props, ref: any) => {
 
 })
 
+WorkExperienceSection.displayName = 'WorkExperienceSection'
 export default WorkExperienceSection

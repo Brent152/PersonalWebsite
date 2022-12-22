@@ -22,4 +22,6 @@ const BlogSection = forwardRef((props, ref: any) => {
 
 })
 
+BlogSection.displayName = 'BlogSection'
+
 export default BlogSection

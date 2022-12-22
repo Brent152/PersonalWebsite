@@ -22,4 +22,5 @@ const IntroSection = forwardRef((props, ref: any) => {
 
 })
 
+IntroSection.displayName = 'IntroSection'
 export default IntroSection
