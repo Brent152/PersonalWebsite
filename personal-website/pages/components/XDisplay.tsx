@@ -11,41 +11,41 @@ const inputData: { [key: string]: any }[] =
     [
         {
             "Blog": "What",
-            "Random:1": "X",
+            "None:1": "X",
             "Introduction": "",
             "Projects": "",
-            "Random:2": "n",
+            "None:2": "n",
             "WorkExperience": "",
             "Contact": "Get",
         },
         {
-            "Random:1": "j",
+            "None:1": "j",
             "WorkExperience": "Where",
             "Projects": "",
             "Blog": "I",
-            "Random:2": "q",
+            "None:2": "q",
             "Introduction": "",
-            "Random:3": "s",
+            "None:3": "s",
             "Contact": "",
         },
         {
             "Introduction": "",
             "Projects": "Personal",
             "Blog": "",
-            "Random:1": "k",
+            "None:1": "k",
             "WorkExperience": "",
             "Contact": "",
         },
         {
             "Projects": "",
             "Contact": "In",
-            "Random:1": "z",
+            "None:1": "z",
             "Blog": "",
             "WorkExperience": "I",
             "Introduction": "About",
         },
         {
-            "Random:1": "o",
+            "None:1": "o",
             "Introduction": "",
             "Projects": "Projects",
             "Blog": "",
@@ -53,21 +53,21 @@ const inputData: { [key: string]: any }[] =
             "Contact": "",
         },
         {
-            "Random:1": "d",
+            "None:1": "d",
             "Projects": "",
             "Introduction": "Me",
             "Blog": "Write",
-            "Random:2": "c",
+            "None:2": "c",
             "WorkExperience": "",
             "Contact": "",
         },
         {
             "Projects": "",
-            "Random:1": "",
+            "None:1": "",
             "Introduction": "",
             "Blog": "",
             "WorkExperience": "Work",
-            "Random:2": "",
+            "None:2": "",
             "Contact": "Touch",
         },
     ]
@@ -77,12 +77,15 @@ const data: displayItem[][] = parseData(inputData)
 export default function XDisplay(props: any) {
 
     const displayItemRefs: MutableRefObject<{ [key: string]: any }> = useRef({})
-    const [hoveringAny, setHoveringAny] = useState<boolean>(false)
+    const [currentlyHovering, setCurrentlyHovering] = useState<string>('')
     const [repeater, setRepeater] = useState<boolean>(false)
     const [startCycle, setStartCycle] = useState<boolean>(false)
     const [curCycleIndex, setCurCycleIndex] = useState<number>(0)
 
     const collections = ['Introduction', 'Projects', 'WorkExperience', 'Blog', 'Contact']
+
+    const currentlyHoveringRef = useRef(currentlyHovering)
+    currentlyHoveringRef.current = currentlyHovering;
 
     // Wait to start cycle on initial page load
     useEffect(() => {
@@ -99,14 +102,14 @@ export default function XDisplay(props: any) {
     useEffect(() => {
         const cycle = async (curCycleIndex: number) => {
             if (!startCycle) { return }
-            if (hoveringAny) {
+            if (currentlyHovering !== 'None') {
                 await new Promise(r => setTimeout(r, 1000))
                 setRepeater(!repeater)
                 return
             }
-            lightCollection(collections[curCycleIndex], displayItemRefs)
-            await new Promise(r => setTimeout(r, 1500))
-            dimCollection(collections[curCycleIndex], displayItemRefs)
+            lightCollection(collections[curCycleIndex], displayItemRefs, currentlyHoveringRef)
+            await new Promise(r => setTimeout(r, 2000))
+            dimCollection(collections[curCycleIndex], displayItemRefs, currentlyHoveringRef)
             await new Promise(r => setTimeout(r, 600))
             if (curCycleIndex === collections.length - 1) {
                 setCurCycleIndex(0)
@@ -130,8 +133,15 @@ export default function XDisplay(props: any) {
                                 className={styles.displayItem}
                                 ref={(element) => displayItemRefs.current[`${item.text}-${index1}-${index2}:${item.collection}`] = element}
                                 key={index2}
-                                onMouseEnter={() => { setHoveringAny(true); mouseEnterCollection(item.collection, displayItemRefs) }}
-                                onMouseLeave={() => { dimCollection(item.collection, displayItemRefs); setHoveringAny(false) }}
+                                onMouseEnter={() => { setCurrentlyHovering(item.collection); mouseEnterCollection(item.collection, displayItemRefs) }}
+                                onMouseLeave={() => {
+                                    const dim = async () => {
+                                        await new Promise(r => setTimeout(r, 300))
+                                        dimCollection(item.collection, displayItemRefs, currentlyHoveringRef)
+                                    }
+                                    dim()
+                                    setCurrentlyHovering('None')
+                                }}
                                 onClick={() => { props.handleCollectionClick(item.collection) }}
                             >
                                 {item.text}
@@ -144,29 +154,33 @@ export default function XDisplay(props: any) {
         </div >
     )
 
-    async function lightCollection(collection: string, displayItemRefs: MutableRefObject<{ [key: string]: any }>) {
-        for (const key of Object.keys(displayItemRefs.current)) {
-            if (key.split(':')[1] === collection) {
-                displayItemRefs.current[key].className = styles.displayItemLit;
-                await new Promise(r => setTimeout(r, 15))
-            }
-        }
-    }
+
 
 }
 
-
-async function dimCollection(collection: string, displayItemRefs: MutableRefObject<{ [key: string]: any }>) {
+async function lightCollection(collection: string, displayItemRefs: MutableRefObject<{ [key: string]: any }>, currentlyHoveringRef: MutableRefObject<string>) {
     for (const key of Object.keys(displayItemRefs.current)) {
         if (key.split(':')[1] === collection) {
+            await new Promise(r => setTimeout(r, 80))
+            if (currentlyHoveringRef.current.split(':')[0] !== 'None') { return }
+            displayItemRefs.current[key].className = styles.displayItemLit;
+        }
+    }
+}
+
+async function dimCollection(collection: string, displayItemRefs: MutableRefObject<{ [key: string]: any }>, currentlyHoveringRef: MutableRefObject<string>) {
+    for (const key of Object.keys(displayItemRefs.current)) {
+        if (key.split(':')[1] === collection) {
+            await new Promise(r => setTimeout(r, 80))
+            if (currentlyHoveringRef.current.split(':')[0] !== 'None') { return }
             displayItemRefs.current[key].className = styles.displayItem;
         }
     }
 }
 
-function mouseEnterCollection(collection: string, displayItemRefs: MutableRefObject<{ [key: string]: any }>) {
+async function mouseEnterCollection(collection: string, displayItemRefs: MutableRefObject<{ [key: string]: any }>) {
     // Light current and dim all others
-    if (collection.split(':')[0] !== 'Random') {
+    if (collection.split(':')[0] !== 'None') {
         for (const key of Object.keys(displayItemRefs.current)) {
             if (key.split(':')[1] === collection) {
                 displayItemRefs.current[key].className = styles.displayItemLit;
@@ -174,7 +188,6 @@ function mouseEnterCollection(collection: string, displayItemRefs: MutableRefObj
                 displayItemRefs.current[key].className = styles.displayItem;
             }
         }
-
     }
 }
 

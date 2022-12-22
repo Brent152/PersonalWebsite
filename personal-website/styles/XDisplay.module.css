@@ -16,7 +16,7 @@
     width: 65px;
 
 
-    transition: all .15s;
+    transition: all .30s;
     text-align: center;
     font-size: 60px;
     line-height: 1em;
@@ -34,7 +34,7 @@
     width: 65px;
 
     text-align: center;
-    transition: all .15s;
+    transition: all .1s;
     font-size: 60px;
     line-height: 1em;
     color: rgb(255, 255, 255);
