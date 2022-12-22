@@ -16,6 +16,7 @@ export default function FadeInElement(props: any) {
   return (
     <div
       className={isVisible ? styles.fadeInSectionVisible : styles.fadeInSectionInvisible}
+      style={props.style}
       ref={domRef}
     >
       {props.children}

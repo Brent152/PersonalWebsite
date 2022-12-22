@@ -4,7 +4,7 @@ import { MutableRefObject, useRef, useState } from 'react'
 import styles from '../styles/Home.module.css'
 import BlogSection from './components/BlogSection'
 import ContactSection from './components/ContactSection'
-import DisplaySection from './components/DisplaySection'
+import LandingSection from './components/LandingSection'
 import IntroSection from './components/IntroSection'
 import ProjectsSection from './components/ProjectsSection'
 import WorkExperienceSection from './components/WorkExperienceSection copy'
@@ -23,7 +23,7 @@ export default function Home() {
       </Head>
 
       <div className={''}>
-        <DisplaySection handleCollectionClick={handleCollectionClick} />
+        <LandingSection handleCollectionClick={handleCollectionClick} />
 
         <IntroSection ref={(element: any) => sectionRefs.current['Introduction'] = element} />
         <ProjectsSection ref={(element: any) => sectionRefs.current['Projects'] = element} />
@@ -38,6 +38,8 @@ export default function Home() {
   )
 
   function handleCollectionClick(collection: string) {
-    sectionRefs.current[collection].scrollIntoView({ behavior: 'smooth' })
+    if (collection.split(':')[0] !== 'Random') {
+      sectionRefs.current[collection].scrollIntoView({ behavior: 'smooth' })
+    }
   }
 }

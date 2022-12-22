@@ -7,15 +7,6 @@
     border-color: 'white' */
 }
 
-.fadeIn {
-    opacity: 100%;
-    transition: opacity 1s;
-}
-
-.fadeIn.visible {
-    opacity: 100%;
-}
-
 .displayRow {
     display: flex;
     justify-content: center;

@@ -1,23 +1,24 @@
 .display {
     border: 'solid';
     padding: 10;
-    /* display: flex;
-    justify-content: center; */
-    /* border-width: 1;
-    border-color: 'white' */
+
+    /* border: solid white 4px; */
+
 }
 
 .displayRow {
     display: flex;
     justify-content: center;
+    margin-block: 20px;
 }
 
 .displayItem {
-    transition: color .8s, text-shadow .8s, -webkit-text-stroke-color .8s;
+    width: 70px;
+
+
+    transition: all .8s;
     text-align: center;
-    margin-left: 30px;
-    margin-top: 30px;
-    font-size: 80px;
+    font-size: 60px;
     line-height: 1em;
     color: rgb(0, 0, 0);
     -webkit-text-stroke-width: 2px;
@@ -25,14 +26,16 @@
     cursor: default;
     user-select: none;
 
+
 }
 
 
 .displayItemLit {
-    transition: color 1.2s, text-shadow 1.2s, -webkit-text-stroke-color 1.2s;
-    margin-left: 30px;
-    margin-top: 30px;
-    font-size: 80px;
+    width: 70px;
+
+    text-align: center;
+    transition: all .8s;
+    font-size: 60px;
     line-height: 1em;
     color: rgb(255, 255, 255);
     -webkit-text-stroke-width: 2px;
