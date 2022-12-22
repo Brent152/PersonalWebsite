@@ -13,10 +13,10 @@
 }
 
 .displayItem {
-    width: 70px;
+    width: 65px;
 
 
-    transition: all .8s;
+    transition: all .15s;
     text-align: center;
     font-size: 60px;
     line-height: 1em;
@@ -31,10 +31,10 @@
 
 
 .displayItemLit {
-    width: 70px;
+    width: 65px;
 
     text-align: center;
-    transition: all .8s;
+    transition: all .15s;
     font-size: 60px;
     line-height: 1em;
     color: rgb(255, 255, 255);
@@ -43,6 +43,8 @@
     text-shadow: 0px 0px 10px rgb(255, 255, 255);
     cursor: default;
     user-select: none;
+
+    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(3600deg) rotateY(0deg) rotateZ(3600deg) skew(0deg);
 
 }
 

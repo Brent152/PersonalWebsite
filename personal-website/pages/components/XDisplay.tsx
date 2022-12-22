@@ -72,11 +72,9 @@ const inputData: { [key: string]: any }[] =
         },
     ]
 
-
 const data: displayItem[][] = parseData(inputData)
 
 export default function XDisplay(props: any) {
-
 
     const displayItemRefs: MutableRefObject<{ [key: string]: any }> = useRef({})
     const [hoveringAny, setHoveringAny] = useState<boolean>(false)
@@ -95,6 +93,7 @@ export default function XDisplay(props: any) {
         }
         pageLoadWait()
     }, [])
+
 
     // Cycle Effect, this is a bit scuffed
     useEffect(() => {
@@ -145,18 +144,19 @@ export default function XDisplay(props: any) {
         </div >
     )
 
-
-}
-
-function lightCollection(collection: string, displayItemRefs: MutableRefObject<{ [key: string]: any }>) {
-    for (const key of Object.keys(displayItemRefs.current)) {
-        if (key.split(':')[1] === collection) {
-            displayItemRefs.current[key].className = styles.displayItemLit;
+    async function lightCollection(collection: string, displayItemRefs: MutableRefObject<{ [key: string]: any }>) {
+        for (const key of Object.keys(displayItemRefs.current)) {
+            if (key.split(':')[1] === collection) {
+                displayItemRefs.current[key].className = styles.displayItemLit;
+                await new Promise(r => setTimeout(r, 15))
+            }
         }
     }
+
 }
 
-function dimCollection(collection: string, displayItemRefs: MutableRefObject<{ [key: string]: any }>) {
+
+async function dimCollection(collection: string, displayItemRefs: MutableRefObject<{ [key: string]: any }>) {
     for (const key of Object.keys(displayItemRefs.current)) {
         if (key.split(':')[1] === collection) {
             displayItemRefs.current[key].className = styles.displayItem;
@@ -174,6 +174,7 @@ function mouseEnterCollection(collection: string, displayItemRefs: MutableRefObj
                 displayItemRefs.current[key].className = styles.displayItem;
             }
         }
+
     }
 }
 

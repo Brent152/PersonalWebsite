@@ -11,7 +11,6 @@ export default function DisplaySection(props: any) {
 
     const displayRef = useRef(null)
 
-    const [curClass, setCurClass] = useState('bigDimText')
 
     return (
         <>
@@ -24,10 +23,7 @@ export default function DisplaySection(props: any) {
             }} ref={displayRef}>
                 <NavBar />
                 <FadeInElement style={{ display: 'flex', justifyContent: 'space-between', marginTop: '2%' }}>
-                    <div className={curClass}
-                        onMouseEnter={() => { setCurClass('rotateboy') }}
-                        onMouseLeave={() => { setCurClass('bigDimText') }}
-                    >TEST</div>
+
                     <div className='bigDimText' style={{ marginLeft: '7%', fontSize: 140 }}>Brent</div>
                     <div className='bigDimText' style={{ marginRight: '7%', fontSize: 140 }}>Julius</div>
                 </FadeInElement>
