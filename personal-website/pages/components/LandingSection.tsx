@@ -11,7 +11,6 @@ export default function DisplaySection(props: any) {
 
     const displayRef = useRef(null)
 
-
     return (
         <>
             <div style={{
@@ -22,6 +21,7 @@ export default function DisplaySection(props: any) {
                 flexDirection: 'column'
             }} ref={displayRef}>
                 <NavBar />
+                <div style={{ fontSize: 40, color: 'white', textAlign: 'center' }}>- WORK IN PROGRESS -</div>
                 <FadeInElement style={{ display: 'flex', justifyContent: 'space-between', marginTop: '2%' }}>
 
                     <div className='bigDimText' style={{ marginLeft: '7%', fontSize: 140 }}>Brent</div>
