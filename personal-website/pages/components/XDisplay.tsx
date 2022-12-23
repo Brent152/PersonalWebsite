@@ -108,9 +108,9 @@ export default function XDisplay(props: any) {
                 return
             }
             lightCollection(collections[curCycleIndex], displayItemRefs, currentlyHoveringRef)
-            await new Promise(r => setTimeout(r, 2000))
+            await new Promise(r => setTimeout(r, 2800))
             dimCollection(collections[curCycleIndex], displayItemRefs, currentlyHoveringRef)
-            await new Promise(r => setTimeout(r, 600))
+            await new Promise(r => setTimeout(r, 400))
             if (curCycleIndex === collections.length - 1) {
                 setCurCycleIndex(0)
             } else {
@@ -136,11 +136,11 @@ export default function XDisplay(props: any) {
                                 onMouseEnter={() => { setCurrentlyHovering(item.collection); mouseEnterCollection(item.collection, displayItemRefs) }}
                                 onMouseLeave={() => {
                                     const dim = async () => {
-                                        await new Promise(r => setTimeout(r, 300))
+                                        await new Promise(r => setTimeout(r, 400))
                                         dimCollection(item.collection, displayItemRefs, currentlyHoveringRef)
                                     }
-                                    dim()
                                     setCurrentlyHovering('None')
+                                    dim()
                                 }}
                                 onClick={() => { props.handleCollectionClick(item.collection) }}
                             >
@@ -163,7 +163,7 @@ async function lightCollection(collection: string, displayItemRefs: MutableRefOb
         if (key.split(':')[1] === collection) {
             await new Promise(r => setTimeout(r, 80))
             if (currentlyHoveringRef.current.split(':')[0] !== 'None') { return }
-            displayItemRefs.current[key].className = styles.displayItemLit;
+            displayItemRefs.current[key].className = styles.displayItemLitByCycle;
         }
     }
 }
@@ -171,7 +171,7 @@ async function lightCollection(collection: string, displayItemRefs: MutableRefOb
 async function dimCollection(collection: string, displayItemRefs: MutableRefObject<{ [key: string]: any }>, currentlyHoveringRef: MutableRefObject<string>) {
     for (const key of Object.keys(displayItemRefs.current)) {
         if (key.split(':')[1] === collection) {
-            await new Promise(r => setTimeout(r, 80))
+            await new Promise(r => setTimeout(r, 60))
             if (currentlyHoveringRef.current.split(':')[0] !== 'None') { return }
             displayItemRefs.current[key].className = styles.displayItem;
         }
@@ -183,7 +183,7 @@ async function mouseEnterCollection(collection: string, displayItemRefs: Mutable
     if (collection.split(':')[0] !== 'None') {
         for (const key of Object.keys(displayItemRefs.current)) {
             if (key.split(':')[1] === collection) {
-                displayItemRefs.current[key].className = styles.displayItemLit;
+                displayItemRefs.current[key].className = styles.displayItemLitByMouse;
             } else {
                 displayItemRefs.current[key].className = styles.displayItem;
             }

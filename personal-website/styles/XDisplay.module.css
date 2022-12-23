@@ -15,8 +15,7 @@
 .displayItem {
     width: 65px;
 
-
-    transition: all .30s;
+    transition: all .15s;
     text-align: center;
     font-size: 60px;
     line-height: 1em;
@@ -26,11 +25,10 @@
     cursor: default;
     user-select: none;
 
-
 }
 
 
-.displayItemLit {
+.displayItemLitByCycle {
     width: 65px;
 
     text-align: center;
@@ -44,7 +42,25 @@
     cursor: default;
     user-select: none;
 
-    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(3600deg) rotateY(0deg) rotateZ(3600deg) skew(0deg);
+    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(1080deg) rotateY(0deg) rotateZ(360deg) skew(360deg);
+
+}
+
+.displayItemLitByMouse {
+    width: 65px;
+
+    text-align: center;
+    transition: all .1s;
+    font-size: 60px;
+    line-height: 1em;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+    cursor: default;
+    user-select: none;
+
+    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(720deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
 
 }
 
