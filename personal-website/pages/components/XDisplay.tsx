@@ -77,7 +77,7 @@ const data: displayItem[][] = parseData(inputData)
 export default function XDisplay(props: any) {
 
     const displayItemRefs: MutableRefObject<{ [key: string]: any }> = useRef({})
-    const [currentlyHovering, setCurrentlyHovering] = useState<string>('')
+    const [currentlyHovering, setCurrentlyHovering] = useState<string>('None')
     const [repeater, setRepeater] = useState<boolean>(false)
     const [startCycle, setStartCycle] = useState<boolean>(false)
     const [curCycleIndex, setCurCycleIndex] = useState<number>(0)
@@ -90,7 +90,7 @@ export default function XDisplay(props: any) {
     // Wait to start cycle on initial page load
     useEffect(() => {
         const pageLoadWait = async () => {
-            await new Promise(r => setTimeout(r, 3000))
+            await new Promise(r => setTimeout(r, 2000))
             setStartCycle(true)
             setRepeater(!repeater)
         }
