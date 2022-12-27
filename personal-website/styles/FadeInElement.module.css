@@ -1,8 +1,0 @@
-.fadeInSectionInvisible {
-    opacity: 0;
-}
-
-.fadeInSectionVisible {
-    transition: opacity 2s;
-    opacity: 1;
-}
