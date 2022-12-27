@@ -35,7 +35,7 @@ a {
   user-select: none;
 }
 
-.bigDimText {
+.nameText {
   transition: color .8s, text-shadow .8s, -webkit-text-stroke-color .8s;
   font-size: 120px;
   line-height: .8em;

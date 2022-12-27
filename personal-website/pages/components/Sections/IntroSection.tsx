@@ -1,16 +1,17 @@
 import { forwardRef, MutableRefObject } from 'react'
 import styles from '../../styles/IntroSection.module.css'
-import FadeInElement from './FadeInElement'
+import SegmentBreak from '../SegmentBreak'
 
 
 const IntroSection = forwardRef((props, ref: any) => {
 
     return (
-        <div className='section'>
-            <FadeInElement>
+        <>
+            <div className='section'>
                 <h1 ref={ref} style={{ color: 'white' }}>ABOUT ME</h1>
-            </FadeInElement>
-        </div >
+            </div >
+            <SegmentBreak />
+        </>
     )
 
 })

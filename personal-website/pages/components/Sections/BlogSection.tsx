@@ -1,16 +1,17 @@
 import { forwardRef } from "react";
-import FadeInElement from "./FadeInElement";
+import SegmentBreak from "../SegmentBreak";
 
 
 const BlogSection = forwardRef((props, ref: any) => {
 
 
     return (
-        <div className='section'>
-            <FadeInElement>
+        <>
+            <div className='section'>
                 <h1 ref={ref} style={{ color: 'white' }}>BLOG</h1>
-            </FadeInElement>
-        </div >
+            </div >
+            <SegmentBreak />
+        </>
     )
 
 })
