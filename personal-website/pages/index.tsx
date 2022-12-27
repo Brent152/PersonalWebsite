@@ -22,22 +22,25 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={''}>
-        <LandingSection handleCollectionClick={handleCollectionClick} />
+      {/* 
+      <ScrollLine viewBox='0 0 1223 1236' path='M408.834 3C308.752 5.40159 95.9104 4.00066 2 3V651.976H464.379V611.313H594.486V651.976H1221V1236' />
+      <ScrollLine viewBox='0 0 1223 1236' path='M814.166 3C914.248 5.40159 1127.09 4.00066 1221 3V651.976H758.621V611.313H628.514V651.976H2.00003V1236' />
+       */}
 
+      <div>
+        <LandingSection handleCollectionClick={handleXDisplayCollectionClick} />
         <IntroSection ref={(element: any) => sectionRefs.current['Introduction'] = element} />
         <ProjectsSection ref={(element: any) => sectionRefs.current['Projects'] = element} />
         <WorkExperienceSection ref={(element: any) => sectionRefs.current['WorkExperience'] = element} />
         <BlogSection ref={(element: any) => sectionRefs.current['Blog'] = element} />
         <ContactSection ref={(element: any) => sectionRefs.current['Contact'] = element} />
 
-
       </div>
 
     </div >
   )
 
-  function handleCollectionClick(collection: string) {
+  function handleXDisplayCollectionClick(collection: string) {
     if (collection.split(':')[0] !== 'Random') {
       sectionRefs.current[collection].scrollIntoView({ behavior: 'smooth' })
     }

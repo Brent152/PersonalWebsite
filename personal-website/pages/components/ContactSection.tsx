@@ -7,17 +7,11 @@ const ContactSection = forwardRef((props, ref: any) => {
 
 
     return (
-        <div style={{
-            backgroundColor: 'white',
-            width: '100%',
-            height: '100vh',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
-        }}>
+        <div className='section'>
             <FadeInElement>
-                <h1 ref={ref} style={{ color: 'black' }}>CONTACT</h1>
+                <h1 ref={ref} style={{ color: 'white' }}>CONTACT</h1>
             </FadeInElement>
+
         </div >
     )
 

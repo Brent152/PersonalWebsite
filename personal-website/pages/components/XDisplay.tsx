@@ -1,6 +1,7 @@
 
 import styles from '../../styles/XDisplay.module.css'
 import { MutableRefObject, useEffect, useRef, useState } from "react"
+import Line from './Line'
 
 type displayItem = {
     text: string,
@@ -76,6 +77,7 @@ const data: displayItem[][] = parseData(inputData)
 
 export default function XDisplay(props: any) {
 
+    const displayRef: MutableRefObject<any> = useRef(null)
     const displayItemRefs: MutableRefObject<{ [key: string]: any }> = useRef({})
     const [currentlyHovering, setCurrentlyHovering] = useState<string>('None')
     const [repeater, setRepeater] = useState<boolean>(false)
@@ -87,10 +89,15 @@ export default function XDisplay(props: any) {
     const currentlyHoveringRef = useRef(currentlyHovering)
     currentlyHoveringRef.current = currentlyHovering;
 
+
+    useEffect(() => {
+
+    }, [displayRef])
+
     // Wait to start cycle on initial page load
     useEffect(() => {
         const pageLoadWait = async () => {
-            await new Promise(r => setTimeout(r, 2000))
+            await new Promise(r => setTimeout(r, 1500))
             setStartCycle(true)
             setRepeater(!repeater)
         }
@@ -124,34 +131,37 @@ export default function XDisplay(props: any) {
 
 
     return (
-        <div className={styles.display}>
-            {data.map((row: displayItem[], index1: number) => {
-                return <div key={index1} className={styles.displayRow}>
-                    {
-                        row.map((item: displayItem, index2: number) => {
-                            return <div
-                                className={styles.displayItem}
-                                ref={(element) => displayItemRefs.current[`${item.text}-${index1}-${index2}:${item.collection}`] = element}
-                                key={index2}
-                                onMouseEnter={() => { setCurrentlyHovering(item.collection); mouseEnterCollection(item.collection, displayItemRefs) }}
-                                onMouseLeave={() => {
-                                    const dim = async () => {
-                                        await new Promise(r => setTimeout(r, 400))
-                                        dimCollection(item.collection, displayItemRefs, currentlyHoveringRef)
-                                    }
-                                    setCurrentlyHovering('None')
-                                    dim()
-                                }}
-                                onClick={() => { props.handleCollectionClick(item.collection) }}
-                            >
-                                {item.text}
-                            </div>
-                        })
-                    }
-                </div>
-            })}
+        <>
 
-        </div >
+            <div className={`${styles.display} ${props.className} `} ref={displayRef}>
+                {data.map((row: displayItem[], index1: number) => {
+                    return <div key={index1} className={styles.displayRow + ' '}>
+                        {
+                            row.map((item: displayItem, index2: number) => {
+                                return <div
+                                    className={styles.displayItem}
+                                    ref={(element) => displayItemRefs.current[`${item.text}-${index1}-${index2}:${item.collection}`] = element}
+                                    key={index2}
+                                    onMouseEnter={() => { setCurrentlyHovering(item.collection); mouseEnterCollection(item.collection, displayItemRefs) }}
+                                    onMouseLeave={() => {
+                                        const dim = async () => {
+                                            await new Promise(r => setTimeout(r, 400))
+                                            dimCollection(item.collection, displayItemRefs, currentlyHoveringRef)
+                                        }
+                                        setCurrentlyHovering('None')
+                                        dim()
+                                    }}
+                                    onClick={() => { props.handleCollectionClick(item.collection) }}
+                                >
+                                    {item.text}
+                                </div>
+                            })
+                        }
+                    </div>
+                })}
+
+            </div >
+        </>
     )
 
 

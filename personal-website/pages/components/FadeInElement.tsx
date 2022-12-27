@@ -15,11 +15,11 @@ export default function FadeInElement(props: any) {
 
   return (
     <div
-      className={isVisible ? styles.fadeInSectionVisible : styles.fadeInSectionInvisible}
+      className={`${props.className} ${isVisible ? styles.fadeInSectionVisible : styles.fadeInSectionInvisibles}`}
       style={props.style}
       ref={domRef}
     >
       {props.children}
-    </div>
+    </div >
   );
 }

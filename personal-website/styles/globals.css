@@ -15,6 +15,14 @@ a {
   box-sizing: border-box;
 }
 
+.section {
+  background-color: black;
+  min-height: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .lightUpText {
   transition: color 1.5s, text-shadow 1.5s, -webkit-text-stroke-color 1.5s;
   font-size: 80px;
@@ -29,32 +37,17 @@ a {
 
 .bigDimText {
   transition: color .8s, text-shadow .8s, -webkit-text-stroke-color .8s;
-  text-align: center;
   font-size: 120px;
-  line-height: 1em;
-  color: rgb(0, 0, 0);
+  line-height: .8em;
+  color: rgb(255, 255, 255);
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: rgb(12, 12, 12);
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 10px rgb(255, 255, 255);
   cursor: default;
   user-select: none;
 
 }
 
-.rotateboy {
-  text-align: center;
-  font-size: 120px;
-  line-height: 1em;
-  color: rgb(0, 0, 0);
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: rgb(12, 12, 12);
-  cursor: default;
-  user-select: none;
-
-  transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(80deg) rotateY(0deg) rotateZ(0deg) skew(0deg);
-  transition: all 1s;
-  transform-style: preserve-3d;
-  color: rgb(250, 250, 250);
-}
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -65,4 +58,8 @@ a {
     color: white;
     background: rgb(255, 255, 255);
   }
+}
+
+.border {
+  border: solid rgb(0, 30, 255) 4px;
 }
