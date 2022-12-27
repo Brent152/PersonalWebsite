@@ -1,7 +1,7 @@
 
 import React, { useRef, useEffect } from 'react'
 
-import styles from '../../styles/ScrollLine.module.css'
+import styles from '../../../styles/ScrollLine.module.css'
 
 
 export default function ScrollLine(props: any) {

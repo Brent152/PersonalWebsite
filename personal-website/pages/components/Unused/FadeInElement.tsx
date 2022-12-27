@@ -1,5 +1,5 @@
 import { MutableRefObject, useEffect, useRef, useState } from 'react';
-import styles from '../../styles/FadeInElement.module.css'
+import styles from '../../../styles/FadeInElement.module.css'
 
 
 export default function FadeInElement(props: any) {

@@ -1,5 +1,5 @@
 import { MutableRefObject, useEffect, useRef, useState } from "react"
-import styles from '../../styles/FlickerWord.module.css'
+import styles from '../../../styles/FlickerWord.module.css'
 
 const lit: object = {
     transition: 'color .8s, text-shadow .8s, -webkit-text-stroke-color .8s',
