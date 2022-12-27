@@ -1,11 +1,8 @@
 import XDisplay from "../XDisplay"
 import styles from '../../styles/DisplaySection.module.css'
-import { MutableRefObject, useEffect, useRef, useState } from "react"
-import { SymbolDisplayPartKind } from "typescript"
-import { SlMenu } from "react-icons/sl";
+import { useRef } from "react"
 import Line from "../Line"
 import BlinkInElement from "../BlinkInElement"
-import FlickerWord from "../Unused/FlickerWord"
 import SegmentBreak from "../SegmentBreak"
 
 

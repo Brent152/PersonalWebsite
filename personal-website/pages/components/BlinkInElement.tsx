@@ -1,5 +1,4 @@
 import { MutableRefObject, useEffect, useRef, useState } from 'react';
-import { SlSocialYoutube } from 'react-icons/sl';
 
 
 export default function BlinkInElement(props: any) {

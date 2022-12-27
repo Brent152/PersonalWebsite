@@ -1,5 +1,4 @@
 import { forwardRef, MutableRefObject } from 'react'
-import styles from '../../styles/IntroSection.module.css'
 import SegmentBreak from '../SegmentBreak'
 
 

@@ -1,7 +1,6 @@
 
 import styles from '../../styles/XDisplay.module.css'
 import { MutableRefObject, useEffect, useRef, useState } from "react"
-import Line from './Line'
 
 type displayItem = {
     text: string,
