@@ -32,11 +32,11 @@ const IntroSection = forwardRef((props, ref: any) => {
                             <p style={{ maxWidth: 600, lineHeight: '2rem' }}>
                                 Hey!
                                 <br />
-                                I'm Brent, a versatile software engineer fueled by a passion for building cool things.
+                                {`I'm Brent, a versatile software engineer fueled by a passion for building cool things.
                                 I was born and raised in Arizona, and will be graduating from ASU with a degree in Computer Science in May.
                                 I believe that this world is a puzzle, and we as humans possess the tools not only to find, but
                                 to create the pieces. I believe that every path to a better planet is derived from a deep
-                                understanding not just of the latest technologies and sciences, but also of one another.
+                                understanding not just of the latest technologies and sciences, but also of one another.`}
                             </p>
                         </BlinkInElement>
                     </div>
