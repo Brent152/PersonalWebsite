@@ -9,7 +9,7 @@
 .displayRow {
     display: flex;
     justify-content: center;
-    margin-block: 20px;
+    margin-bottom: 20px;
 }
 
 .displayItem {
@@ -21,7 +21,7 @@
     line-height: 1em;
     color: rgb(0, 0, 0);
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: rgb(12, 12, 12);
+    -webkit-text-stroke-color: rgb(22, 22, 22);
     cursor: default;
     user-select: none;
 
@@ -57,7 +57,7 @@
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: rgb(255, 255, 255);
     text-shadow: 0px 0px 10px rgb(255, 255, 255);
-    cursor: default;
+    cursor: pointer;
     user-select: none;
 
     transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(360deg) rotateY(0deg) rotateZ(0deg) skew(0deg);

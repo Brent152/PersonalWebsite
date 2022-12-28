@@ -23,9 +23,9 @@ a {
   flex-direction: column;
 }
 
-.lightUpText {
+.headerText {
   transition: color 1.5s, text-shadow 1.5s, -webkit-text-stroke-color 1.5s;
-  font-size: 80px;
+  font-size: 60px;
   line-height: 1em;
   color: rgb(255, 255, 255);
   -webkit-text-stroke-width: 2px;
@@ -33,6 +33,19 @@ a {
   text-shadow: 0px 0px 10px rgb(255, 255, 255);
   cursor: default;
   user-select: none;
+}
+
+.paragraphText {
+  transition: color 1.5s, text-shadow 1.5s, -webkit-text-stroke-color 1.5s;
+  font-size: 20px;
+  line-height: 1em;
+  color: rgb(255, 255, 255);
+  font-weight: 100;
+  text-shadow: 0px 0px 2px rgb(255, 255, 255);
+}
+
+.mb30 {
+  margin-bottom: 30px;
 }
 
 .nameText {

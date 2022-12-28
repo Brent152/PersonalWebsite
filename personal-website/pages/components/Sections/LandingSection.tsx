@@ -24,16 +24,16 @@ export default function LandingSection(props: any) {
                     <div style={{ display: 'flex', flexDirection: 'column', alignSelf: 'center', alignItems: 'center', minWidth: 320 }}>
                         <BlinkInElement className='nameText' speed={.8} >Brent</BlinkInElement>
                         <Line style={{ height: 1, marginBlock: 50, alignSelf: 'flex-end' }} shownWidth={400} hiddenWidth={0} />
-                        <div style={{ lineHeight: '.8em', fontSize: 120 }}>&nbsp;</div>
+                        <div style={{ lineHeight: '.8em', fontSize: 120, userSelect: 'none' }}>&nbsp;</div>
                     </div>
 
-                    <Line style={{ alignSelf: 'center', marginRight: 30 }} shownHeight={400} />
+                    <Line style={{ alignSelf: 'center', marginRight: 50 }} shownHeight={400} />
                     <BlinkInElement><XDisplay handleCollectionClick={props.handleCollectionClick} /></BlinkInElement>
-                    <Line style={{ alignSelf: 'center', marginLeft: 30 }} shownHeight={400} />
+                    <Line style={{ alignSelf: 'center', marginLeft: 50 }} shownHeight={400} />
 
                     <div style={{ display: 'flex', flexDirection: 'column', alignSelf: 'center', alignItems: 'center', minWidth: 320 }}>
-                        <div style={{ lineHeight: '.8em', fontSize: 120 }}>&nbsp;</div>
-                        <Line style={{ height: 1, marginBlock: 30, alignSelf: 'flex-start', overflow: 'hidden' }} shownWidth={400} hiddenWidth={0} />
+                        <div style={{ lineHeight: '.8em', fontSize: 120, userSelect: 'none' }}>&nbsp;</div>
+                        <Line style={{ height: 1, marginBlock: 35, alignSelf: 'flex-start', overflow: 'hidden' }} shownWidth={400} hiddenWidth={0} />
                         <BlinkInElement className='nameText' speed={.8} >Julius</BlinkInElement>
                     </div>
                 </div>

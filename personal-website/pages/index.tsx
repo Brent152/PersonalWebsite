@@ -42,7 +42,7 @@ export default function Home() {
 
   function handleXDisplayCollectionClick(collection: string) {
     if (collection.split(':')[0] !== 'Random') {
-      sectionRefs.current[collection].scrollIntoView({ behavior: 'smooth', block: 'start' })
+      sectionRefs.current[collection].scrollIntoView({ behavior: 'smooth', block: 'center' })
     }
   }
 }
