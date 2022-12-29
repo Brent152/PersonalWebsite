@@ -1,14 +1,41 @@
 import { forwardRef } from "react";
+import BlinkInElement from "../BlinkInElement";
+import ListItem from "../ListItem";
+import ListLine from "../ListLine";
 import SegmentBreak from "../SegmentBreak";
 
 
 const BlogSection = forwardRef((props, ref: any) => {
 
-
     return (
         <>
             <div className='section'>
-                <h1 ref={ref} style={{ color: 'white' }}>BLOG</h1>
+                <div
+                    className={` `}
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignSelf: 'center',
+                        alignItems: 'flex-start',
+                        marginBottom: 80,
+                        marginTop: 50,
+                        width: 1000
+                    }}
+                >
+
+                    <BlinkInElement className='headerText'>Blog</BlinkInElement>
+                    <ListLine />
+                    <ListItem
+                        title={'Nothing to see here yet'}
+                        subtitle={':('}
+                        text={
+                            `But there will be posts in the future!`
+                        }
+                    />
+                    <ListLine />
+                    {/* Anchor for scroll jump */}
+                    <div ref={ref} />
+                </div >
             </div >
             <SegmentBreak />
         </>

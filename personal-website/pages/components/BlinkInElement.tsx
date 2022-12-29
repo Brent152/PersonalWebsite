@@ -17,11 +17,11 @@ export default function BlinkInElement(props: any) {
             className={`${props.className}`}
             style={
                 isVisible ? {
-                    transition: `all ${props.speed ? props.speed : .5}s`,
+                    transition: `all ${props.speedMs ? props.speedMs : 500}ms`,
                     transitionDelay: props.transitionDelay ? props.transitionDelay : '100ms',
                     ...props.style
                 } : {
-                    transition: `all ${props.speed ? props.speed : .5}s`,
+                    transition: `all ${props.speedMs ? props.speedMs : 500}ms`,
                     transitionDelay: props.transitionDelay ? props.transitionDelay : '100ms',
                     transform: `${props.style ? props.style.transform : ''} scaleY(0)`,
                     ...props.style,

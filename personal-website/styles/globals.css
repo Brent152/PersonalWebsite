@@ -35,6 +35,25 @@ a {
   user-select: none;
 }
 
+.smallHeaderText {
+  transition: color 1.5s, text-shadow 1.5s, -webkit-text-stroke-color 1.5s;
+  font-size: 30px;
+  line-height: 1em;
+  color: rgb(255, 255, 255);
+  font-weight: 100;
+  text-shadow: 0px 0px 2px rgb(255, 255, 255);
+  margin-bottom: 8px;
+}
+
+.smallSubheaderText {
+  transition: color 1.5s, text-shadow 1.5s, -webkit-text-stroke-color 1.5s;
+  font-size: 16px;
+  line-height: 1em;
+  color: rgb(135, 135, 135);
+  font-weight: 100;
+  margin-bottom: 5px;
+}
+
 .paragraphText {
   transition: color 1.5s, text-shadow 1.5s, -webkit-text-stroke-color 1.5s;
   font-size: 20px;
@@ -42,10 +61,7 @@ a {
   color: rgb(255, 255, 255);
   font-weight: 100;
   text-shadow: 0px 0px 2px rgb(255, 255, 255);
-}
-
-.mb30 {
-  margin-bottom: 30px;
+  line-height: 2rem;
 }
 
 .nameText {

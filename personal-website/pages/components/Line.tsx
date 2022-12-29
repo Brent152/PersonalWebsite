@@ -22,14 +22,14 @@ export default function Line(props: any) {
                     backgroundColor: 'white',
                     width: props.shownWidth ? props.shownWidth : 1,
                     height: props.shownHeight ? props.shownHeight : 100,
-                    transition: 'all 1s',
-                    transitionDelay: props.transitionDelay ? props.transitionDelay : '100ms',
+                    transition: props.speedMs ? `all ${props.speedMs}ms` : 'all 1000ms',
+                    transitionDelay: props.transitionDelay ? `${props.transitionDelay}ms` : '100ms',
                     ...props.style
                 } : {
                     backgroundColor: 'white',
                     width: props.hiddenWidth ? props.hiddenWidth : 1,
                     height: props.hiddenHeight ? props.hiddenHeight : 0,
-                    transition: 'all 1s',
+                    transition: props.speedMs ? `all ${props.speedMs}ms` : 'all 1000ms',
                     transitionDelay: '100ms',
                     ...props.style
                 }

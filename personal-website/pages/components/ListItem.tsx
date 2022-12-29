@@ -1,0 +1,21 @@
+import BlinkInElement from "./BlinkInElement";
+import GitHubLogo from "./GitHubLogo";
+
+export default function ListItem(props: any) {
+    return (
+        <BlinkInElement>
+            <div style={{ display: 'flex' }}>
+                <div className='smallHeaderText' style={{ marginRight: 15 }}>{props.title}</div>
+                {props.gitHubLink && <GitHubLogo link={props.gitHubLink} />}
+            </div>
+            <div className='smallSubheaderText'>
+                {props.subtitle}
+            </div>
+            <div className='paragraphText'>
+                {props.text}
+            </div>
+
+        </BlinkInElement>
+    )
+
+}

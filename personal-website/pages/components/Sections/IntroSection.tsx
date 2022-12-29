@@ -8,7 +8,7 @@ const IntroSection = forwardRef((props, ref: any) => {
 
     return (
         <>
-            <div ref={ref} className='section'>
+            <div ref={ref} className='section' >
                 <div
                     className={` `}
                     style={{
@@ -23,13 +23,14 @@ const IntroSection = forwardRef((props, ref: any) => {
                         <Line style={{ height: 1, marginBlock: 30 }} shownWidth={400} hiddenWidth={0} />
                         <Line style={{ height: 1, marginBlock: 30 }} shownWidth={400} hiddenWidth={0} />
                     </div>
-
+                    {/* <Line style={{ position: 'relative', flexGrow: 0, transform: 'translate(-60px, 0px)' }} shownHeight={150} speedMs={300} />
+                    <Line style={{ position: 'relative', flexGrow: 0, transform: 'translate(-30px, 0px)' }} shownHeight={300} speedMs={300} /> */}
                     <Line style={{ marginRight: 30 }} shownHeight={400} />
 
                     <div style={{ display: 'flex', flexDirection: 'column' }}>
-                        <BlinkInElement className='headerText mb15' speed={.8} >About Me</BlinkInElement>
+                        <BlinkInElement className='headerText' speedMs={800} >About Me</BlinkInElement>
                         <BlinkInElement className='paragraphText'>
-                            <p style={{ maxWidth: 600, lineHeight: '2rem' }}>
+                            <p style={{ maxWidth: 600 }}>
                                 Hey!
                                 <br />
                                 {`I'm Brent, a versatile software engineer fueled by a passion for building cool things.
@@ -41,6 +42,8 @@ const IntroSection = forwardRef((props, ref: any) => {
                         </BlinkInElement>
                     </div>
                     <Line style={{ marginLeft: 30 }} shownHeight={400} />
+                    {/* <Line style={{ position: 'relative', flexGrow: 0, transform: 'translate(30px, 0px)' }} shownHeight={300} speedMs={300} />
+                    <Line style={{ position: 'relative', flexGrow: 0, transform: 'translate(60px, 0px)' }} shownHeight={150} speedMs={300} /> */}
 
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                         <Line style={{ height: 1, marginBlock: 30 }} shownWidth={400} hiddenWidth={0} />

@@ -8,10 +8,13 @@ const ContactSection = forwardRef((props, ref: any) => {
 
     return (
         <>
-            <div className='section'>
-                <h1 ref={ref} style={{ color: 'white' }}>CONTACT</h1>
+            <div ref={ref} className='section'>
+                <h1 style={{ color: 'white' }}>CONTACT</h1>
             </div >
             <SegmentBreak />
+            <div style={{ height: 60, backgroundColor: 'black' }}>
+
+            </div>
         </>
     )
 

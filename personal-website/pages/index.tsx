@@ -30,8 +30,8 @@ export default function Home() {
       <div>
         <LandingSection handleCollectionClick={handleXDisplayCollectionClick} />
         <IntroSection ref={(element: any) => sectionRefs.current['Introduction'] = element} />
-        <ProjectsSection ref={(element: any) => sectionRefs.current['Projects'] = element} />
         <WorkExperienceSection ref={(element: any) => sectionRefs.current['WorkExperience'] = element} />
+        <ProjectsSection ref={(element: any) => sectionRefs.current['Projects'] = element} />
         <BlogSection ref={(element: any) => sectionRefs.current['Blog'] = element} />
         <ContactSection ref={(element: any) => sectionRefs.current['Contact'] = element} />
 
