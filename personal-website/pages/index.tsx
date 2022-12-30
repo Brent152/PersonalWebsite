@@ -27,7 +27,9 @@ export default function Home() {
       <ScrollLine viewBox='0 0 1223 1236' path='M814.166 3C914.248 5.40159 1127.09 4.00066 1221 3V651.976H758.621V611.313H628.514V651.976H2.00003V1236' />
        */}
 
-      <div>
+      <div style={{
+        backgroundColor: 'black'
+      }}>
         <LandingSection handleCollectionClick={handleXDisplayCollectionClick} />
         <IntroSection ref={(element: any) => sectionRefs.current['Introduction'] = element} />
         <WorkExperienceSection ref={(element: any) => sectionRefs.current['WorkExperience'] = element} />
