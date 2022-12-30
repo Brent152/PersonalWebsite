@@ -24,7 +24,7 @@ export default function LandingSection(props: any) {
                     {/* <Line style={{ alignSelf: 'center' }} shownHeight={50} transitionDelay={600} /> */}
                     <div style={{ display: 'flex', flexDirection: 'column', alignSelf: 'center', alignItems: 'center', minWidth: 320 }}>
                         <BlinkInElement className='nameText' speedMs={800} >Brent</BlinkInElement>
-                        <Line style={{ height: 1, marginBlock: 50, alignSelf: 'flex-end' }} shownWidth={400} hiddenWidth={0} />
+                        <Line style={{ height: 1, marginBlock: 50, alignSelf: 'flex-end' }} shownWidth={350} hiddenWidth={0} />
                         <div style={{ lineHeight: '.8em', fontSize: 120, userSelect: 'none' }}>&nbsp;</div>
                     </div>
 
@@ -34,7 +34,7 @@ export default function LandingSection(props: any) {
 
                     <div style={{ display: 'flex', flexDirection: 'column', alignSelf: 'center', alignItems: 'center', minWidth: 320 }}>
                         <div style={{ lineHeight: '.8em', fontSize: 120, userSelect: 'none' }}>&nbsp;</div>
-                        <Line style={{ height: 1, marginBlock: 35, alignSelf: 'flex-start', overflow: 'hidden' }} shownWidth={400} hiddenWidth={0} />
+                        <Line style={{ height: 1, marginBlock: 35, alignSelf: 'flex-start', overflow: 'hidden' }} shownWidth={350} hiddenWidth={0} />
                         <BlinkInElement className='nameText' speedMs={800} >Julius</BlinkInElement>
                     </div>
                     {/* <Line style={{ alignSelf: 'center' }} shownHeight={50} transitionDelay={600} /> */}
