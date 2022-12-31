@@ -30,7 +30,7 @@ const inputData: { [key: string]: any }[] =
         },
         {
             "Introduction": "",
-            "Projects": "Relatedd",
+            "Projects": "Personal",
             "Blog": "",
             "None:1": "k",
             "WorkExperience": "",
