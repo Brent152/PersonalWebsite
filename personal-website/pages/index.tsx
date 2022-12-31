@@ -18,7 +18,7 @@ export default function Home() {
     <>
       <Head>
         <title>Brent Julius</title>
-        <meta name="description" content="Brent Julius' Personal Portfolio Website" />
+        <meta name="description" content="Brent Julius' Portfolio Website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

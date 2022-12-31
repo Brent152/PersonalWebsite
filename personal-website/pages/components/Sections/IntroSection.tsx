@@ -29,16 +29,14 @@ const IntroSection = forwardRef((props, ref: any) => {
 
                     <div style={{ display: 'flex', flexDirection: 'column' }}>
                         <BlinkInElement className='headerText' speedMs={800} >About Me</BlinkInElement>
-                        <BlinkInElement className='paragraphText'>
-                            <p style={{ maxWidth: 600 }}>
-                                Hey!
-                                <br />
-                                {`I'm Brent, a versatile software engineer fueled by a passion for building cool things.
+                        <BlinkInElement className='paragraphText' style={{ maxWidth: 600, marginTop: '1.5vh' }}>
+                            Hey!
+                            <br />
+                            {`I'm Brent, a versatile software engineer fueled by a passion for building cool things.
                                 I was born and raised in Arizona, and will be graduating from ASU with a degree in Computer Science in May.
                                 I believe that this world is a puzzle, and we as humans possess the tools not only to find, but
                                 to create the pieces. I believe that every path to a better planet is derived from a deep
                                 understanding not just of the latest technologies and sciences, but also of one another.`}
-                            </p>
                         </BlinkInElement>
                     </div>
                     <Line style={{ marginLeft: 30 }} shownHeight={400} />
