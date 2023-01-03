@@ -9,9 +9,9 @@ export default function ListLine(props: any) {
             alignSelf: 'center',
             marginBlock: 30,
         }}>
-            <Line style={{}} shownHeight={30} />
-            <Line style={{ height: 1, }} shownWidth={1100} hiddenWidth={0} />
-            <Line style={{}} shownHeight={30} />
+            <Line variant='xSmallV' />
+            <Line variant='largeH' />
+            <Line variant='xSmallV' />
         </div>
 
     )

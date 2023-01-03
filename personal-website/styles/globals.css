@@ -77,6 +77,12 @@ a {
 
 }
 
+.workInProgress {
+  position: absolute;
+  color: white;
+  text-align: right;
+}
+
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -91,4 +97,99 @@ a {
 
 .border {
   border: solid rgb(0, 30, 255) 4px;
+}
+
+/* SMARTPHONES PORTRAIT */
+@media only screen and (min-width: 300px) {
+  .nameText {
+    font-size: 60px;
+  }
+
+  .headerText {
+    font-size: 30px;
+    line-height: 1em;
+    text-shadow: 0px 0px 0px rgb(255, 255, 255);
+  }
+
+  /* SMALL HEADER??? */
+  /* SMALL SUBHEADER??? */
+
+  .paragraphText {
+    font-size: 12px;
+    line-height: 1.4em;
+    text-shadow: 0px 0px 0px rgb(255, 255, 255);
+  }
+
+  .workInProgress {
+
+    font-size: 20px;
+  }
+
+}
+
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) {
+  .nameText {
+    font-size: 60px;
+  }
+
+  .headerText {
+    font-size: 60px;
+    line-height: 1em;
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+  }
+
+  .paragraphText {
+    font-size: 12px;
+    line-height: 1.4em;
+    text-shadow: 0px 0px 0px rgb(255, 255, 255);
+  }
+
+  .paragraphText {
+    font-size: 20px;
+  }
+}
+
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) {
+  .nameText {
+    font-size: 60px;
+  }
+
+  .headerText {
+    font-size: 60px;
+    line-height: 1em;
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+  }
+
+  .paragraphText {
+    font-size: 20px;
+    line-height: 1.4em;
+    text-shadow: 0px 0px 0px rgb(255, 255, 255);
+  }
+}
+
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 1024px) {
+  .nameText {
+    font-size: 120px;
+  }
+
+  .headerText {
+    font-size: 60px;
+    line-height: 1em;
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+  }
+
+  .paragraphText {
+    font-size: 20px;
+    line-height: 1.4em;
+    text-shadow: 0px 0px 0px rgb(255, 255, 255);
+  }
+
+  .workInProgress {
+
+    font-size: 40px;
+  }
 }

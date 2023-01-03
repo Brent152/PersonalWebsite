@@ -16,12 +16,12 @@ export default function SegmentBreak(props: any) {
             }}
         >
             <div style={{ display: 'flex', width: '48%', alignItems: 'center' }}>
-                <Line style={{ height: 1 }} shownWidth={'100%'} hiddenWidth={0} />
-                <Line shownHeight={60} />
+                <Line variant='fullH' />
+                <Line variant='smallV' />
             </div>
             <div style={{ display: 'flex', width: '48%', alignItems: 'center', justifyContent: 'flex-end' }}>
-                <Line shownHeight={60} />
-                <Line style={{ height: 1 }} shownWidth={'100%'} hiddenWidth={0} />
+                <Line variant='smallV' />
+                <Line variant='fullH' />
             </div>
 
             {/* <Line style={{ position: 'absolute', marginBlock: 50, left: '45%' }} shownHeight={50} /> */}

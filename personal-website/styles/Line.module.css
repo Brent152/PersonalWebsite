@@ -1,0 +1,65 @@
+.line {
+    background-color: white;
+    transition: all 1000ms;
+    transition-delay: 100ms;
+}
+
+.mediumH {
+    width: 20vw;
+    height: 1px;
+}
+
+.mediumH--hidden {
+    width: 0px;
+    height: 1px;
+}
+
+.largeH {
+    width: 58vw;
+    height: 1px;
+}
+
+.largeH--hidden {
+    width: 0px;
+    height: 1px;
+}
+
+.fullH {
+    width: 100%;
+    height: 1px;
+}
+
+.fullH--hidden {
+    width: 0px;
+    height: 1px;
+}
+
+.xSmallV {
+    width: 1px;
+    height: 3vh;
+}
+
+.xSmallV--hidden {
+    width: 1px;
+    height: 0px;
+}
+
+.smallV {
+    width: 1px;
+    height: 6vh;
+}
+
+.smallV--hidden {
+    width: 1px;
+    height: 0px;
+}
+
+.mediumV {
+    width: 1px;
+    height: 42vh;
+}
+
+.mediumV--hidden {
+    width: 1px;
+    height: 0px;
+}

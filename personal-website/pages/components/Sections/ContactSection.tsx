@@ -25,12 +25,12 @@ const ContactSection = forwardRef((props, ref: any) => {
                     }}
                 >
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
-                        <Line style={{ height: 1, marginBlock: 30 }} shownWidth={400} hiddenWidth={0} />
-                        <Line style={{ height: 1, marginBlock: 30 }} shownWidth={400} hiddenWidth={0} />
+                        <Line variant='mediumH' style={{ marginBlock: 30 }} />
+                        <Line variant='mediumH' style={{ marginBlock: 30 }} />
                     </div>
                     {/* <Line style={{ position: 'relative', flexGrow: 0, transform: 'translate(-60px, 0px)' }} shownHeight={150} speedMs={300} />
                     <Line style={{ position: 'relative', flexGrow: 0, transform: 'translate(-30px, 0px)' }} shownHeight={300} speedMs={300} /> */}
-                    <Line style={{ marginRight: 30 }} shownHeight={400} />
+                    <Line variant='mediumV' style={{ marginRight: 30 }} />
 
                     <div style={{ display: 'flex', flexDirection: 'column' }}>
                         <BlinkInElement className='headerText' speedMs={800} >Get In Touch</BlinkInElement>
@@ -45,13 +45,14 @@ const ContactSection = forwardRef((props, ref: any) => {
                             <EmailIcon link={`https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSHxwNHtgTHrrdkrwVFWQtPNFjhmKPhFZvdvgXPkMdhGDhztRxxdcDLNLnZMWQJfTRZRSLzh`} style={{ marginLeft: 15 }} />
                         </BlinkInElement>
                     </div>
-                    <Line style={{ marginLeft: 30 }} shownHeight={400} />
+                    <Line variant='mediumV' style={{ marginLeft: 30 }} />
+
                     {/* <Line style={{ position: 'relative', flexGrow: 0, transform: 'translate(30px, 0px)' }} shownHeight={300} speedMs={300} />
                     <Line style={{ position: 'relative', flexGrow: 0, transform: 'translate(60px, 0px)' }} shownHeight={150} speedMs={300} /> */}
 
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                        <Line style={{ height: 1, marginBlock: 30 }} shownWidth={400} hiddenWidth={0} />
-                        <Line style={{ height: 1, marginBlock: 30 }} shownWidth={400} hiddenWidth={0} />
+                        <Line variant='mediumH' style={{ marginBlock: 30 }} />
+                        <Line variant='mediumH' style={{ marginBlock: 30 }} />
                     </div>
                 </div>
             </div>

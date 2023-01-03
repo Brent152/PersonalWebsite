@@ -11,45 +11,44 @@ const inputData: { [key: string]: any }[] =
     [
         {
             "Blog": "What",
-            "None:1": "X",
             "Introduction": "",
             "Projects": "",
-            "None:2": "n",
+            "None:1": "xnfal",
             "WorkExperience": "",
-            "Contact": "Get",
+            "Contact": "",
         },
         {
-            "None:1": "j",
             "WorkExperience": "Where",
             "Projects": "",
+            "None:1": "q",
             "Blog": "I",
-            "None:2": "q",
+            "None:2": "j",
             "Introduction": "",
             "None:3": "s",
             "Contact": "",
         },
         {
             "Introduction": "",
-            "Projects": "Personal",
+            "Contact": "Get",
+            "None:1": "q",
+            "None:2": "k",
+            "Projects": "Side",
             "Blog": "",
-            "None:1": "k",
             "WorkExperience": "",
-            "Contact": "",
         },
         {
             "Projects": "",
-            "Contact": "In",
-            "None:1": "z",
             "Blog": "",
-            "WorkExperience": "I",
             "Introduction": "About",
+            "Contact": "In",
+            "None:1": "zl",
+            "WorkExperience": "",
         },
         {
-            "None:1": "o",
             "Introduction": "",
             "Projects": "Projects",
+            "WorkExperience": "I",
             "Blog": "",
-            "WorkExperience": "",
             "Contact": "",
         },
         {
@@ -172,7 +171,7 @@ async function lightCollection(collection: string, displayItemRefs: MutableRefOb
         if (key.split(':')[1] === collection) {
             await new Promise(r => setTimeout(r, 80))
             if (currentlyHoveringRef.current.split(':')[0] !== 'None') { return }
-            displayItemRefs.current[key].className = styles.displayItemLitByCycle;
+            displayItemRefs.current[key].className = displayItemRefs.current[key].className + ' ' + styles.displayItemLitByCycle;
         }
     }
 }
@@ -192,7 +191,7 @@ async function mouseEnterCollection(collection: string, displayItemRefs: Mutable
     if (collection.split(':')[0] !== 'None') {
         for (const key of Object.keys(displayItemRefs.current)) {
             if (key.split(':')[1] === collection) {
-                displayItemRefs.current[key].className = styles.displayItemLitByMouse;
+                displayItemRefs.current[key].className = displayItemRefs.current[key].className + ' ' + styles.displayItemLitByMouse;
             } else {
                 displayItemRefs.current[key].className = styles.displayItem;
             }

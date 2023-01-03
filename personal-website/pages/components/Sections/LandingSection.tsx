@@ -13,28 +13,27 @@ export default function LandingSection(props: any) {
 
     return (
         <>
-            <div style={{ position: 'absolute', fontSize: 40, color: 'white', textAlign: 'right', width: '100%', right: 100 }}>- WORK IN PROGRESS -</div>
+            <div className='workInProgress'>- WORK IN PROGRESS -</div>
             {/* <SlMenu style={{ position: 'absolute', width: 30, height: 30, marginLeft: 25, marginTop: 20, backgroundColor: 'black' }} /> */}
             <div className='section ' ref={landingSectionRef} style={{ minHeight: '100vh', justifyContent: 'space-around' }}>
                 <SegmentBreak />
-
 
                 <div className='' style={{ display: 'flex', justifyContent: 'center', marginTop: 20, marginBottom: 30 }}>
 
                     {/* <Line style={{ alignSelf: 'center' }} shownHeight={50} transitionDelay={600} /> */}
                     <div style={{ display: 'flex', flexDirection: 'column', alignSelf: 'center', alignItems: 'center', minWidth: 320 }}>
                         <BlinkInElement className='nameText' speedMs={800} >Brent</BlinkInElement>
-                        <Line style={{ height: 1, marginBlock: 50, alignSelf: 'flex-end' }} shownWidth={350} hiddenWidth={0} />
+                        <Line variant='mediumH' style={{ height: 1, marginBlock: 50, alignSelf: 'flex-end' }} />
                         <div style={{ lineHeight: '.8em', fontSize: 120, userSelect: 'none' }}>&nbsp;</div>
                     </div>
 
-                    <Line style={{ alignSelf: 'center', marginRight: 50 }} shownHeight={400} />
+                    <Line variant='mediumV' style={{ alignSelf: 'center', marginRight: 50 }} />
                     <BlinkInElement><XDisplay handleCollectionClick={props.handleCollectionClick} /></BlinkInElement>
-                    <Line style={{ alignSelf: 'center', marginLeft: 50 }} shownHeight={400} />
+                    <Line variant='mediumV' style={{ alignSelf: 'center', marginLeft: 50 }} />
 
                     <div style={{ display: 'flex', flexDirection: 'column', alignSelf: 'center', alignItems: 'center', minWidth: 320 }}>
                         <div style={{ lineHeight: '.8em', fontSize: 120, userSelect: 'none' }}>&nbsp;</div>
-                        <Line style={{ height: 1, marginBlock: 35, alignSelf: 'flex-start', overflow: 'hidden' }} shownWidth={350} hiddenWidth={0} />
+                        <Line variant='mediumH' style={{ height: 1, marginBlock: 35, alignSelf: 'flex-start', overflow: 'hidden' }} />
                         <BlinkInElement className='nameText' speedMs={800} >Julius</BlinkInElement>
                     </div>
                     {/* <Line style={{ alignSelf: 'center' }} shownHeight={50} transitionDelay={600} /> */}
