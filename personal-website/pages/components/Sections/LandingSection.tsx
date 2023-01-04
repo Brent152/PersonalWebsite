@@ -1,15 +1,26 @@
 import XDisplay from "../XDisplay"
 import styles from '../../styles/DisplaySection.module.css'
-import { useRef } from "react"
+import { useRef, useState, useEffect } from "react"
 import Line from "../Line"
 import BlinkInElement from "../BlinkInElement"
 import SegmentBreak from "../SegmentBreak"
-import useWindowDimensions from "../Functions/useWindowDimensions"
 
 
-export default function LandingSection(props: any) {
+export default function LandingSesction(props: any) {
 
-    const { viewWidth, viewHeight }: { viewWidth: number | null, viewHeight: number | null } = useWindowDimensions();
+    const [viewWidth, setViewWidth] = useState<number | null>(null)
+
+    useEffect(() => {
+        const handleResize = () => {
+            setViewWidth(window.innerWidth)
+        }
+        handleResize()
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [])
+
+
+    // const { viewWidth, viewHeight }: { viewWidth: number | null, viewHeight: number | null } = useWindowDimensions();
 
 
     const landingSectionRef = useRef<HTMLDivElement>(null)

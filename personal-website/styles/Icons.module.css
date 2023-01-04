@@ -1,13 +1,11 @@
 .icon {
     width: 30px;
-    margin-left: 15px;
 }
 
 /* SMARTPHONES PORTRAIT */
 @media only screen and (min-width: 300px) {
     .icon {
         width: 20px;
-        margin-left: 10px;
     }
 }
 
@@ -22,6 +20,5 @@
 @media only screen and (min-width: 1024px) {
     .icon {
         width: 30px;
-        margin-left: 15px;
     }
 }
