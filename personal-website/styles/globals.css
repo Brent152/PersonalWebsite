@@ -100,6 +100,11 @@ a {
   margin-block: 3vh;
 }
 
+.landingSection {
+  min-height: 100vh;
+  justify-content: space-around;
+}
+
 .landingSectionContainer {
   display: flex;
   justify-content: center;
@@ -130,7 +135,7 @@ a {
   .headerText {
     font-size: 30px;
     line-height: 1em;
-    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+    text-shadow: 0px 0px 0px rgb(255, 255, 255);
     letter-spacing: .1rem;
   }
 
@@ -152,6 +157,10 @@ a {
     width: 80vw;
     margin-bottom: 3vh;
 
+  }
+
+  .landingSection {
+    min-height: 75vh;
   }
 
   .landingSectionContainer {
@@ -176,7 +185,7 @@ a {
   .headerText {
     font-size: 60px;
     line-height: 1em;
-    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+    text-shadow: 0px 0px 0px rgb(255, 255, 255);
   }
 
   .paragraphText {
@@ -188,6 +197,7 @@ a {
   .paragraphText {
     font-size: 20px;
   }
+
 
   .listSection {
     width: 80vw;
@@ -254,6 +264,10 @@ a {
     width: 55vw;
   }
 
+  .landingSection {
+    min-height: 100vh;
+  }
+
   .landingSectionContainer {
     flex-direction: row;
   }
@@ -293,6 +307,8 @@ a {
   .listSection {
     width: 55vw;
   }
+
+
 
   .landingSectionContainer {
     flex-direction: row;

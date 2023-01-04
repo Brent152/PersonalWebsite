@@ -30,7 +30,7 @@ export default function LandingSesction(props: any) {
         <>
             <div className='workInProgress'>- WORK IN PROGRESS -</div>
             {/* <SlMenu style={{ position: 'absolute', width: 30, height: 30, marginLeft: 25, marginTop: 20, backgroundColor: 'black' }} /> */}
-            <div className='section ' ref={landingSectionRef} style={{ minHeight: '100vh', justifyContent: 'space-around' }}>
+            <div className='section landingSection' ref={landingSectionRef}>
                 <SegmentBreak />
 
                 <div className='landingSectionContainer'>
