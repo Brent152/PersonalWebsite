@@ -11,16 +11,7 @@ const BlogSection = forwardRef((props, ref: any) => {
         <>
             <div className='section'>
                 <div
-                    className={` `}
-                    style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignSelf: 'center',
-                        alignItems: 'flex-start',
-                        marginBottom: 80,
-                        marginTop: 50,
-                        width: 1000
-                    }}
+                    className={'listSection'}
                 >
 
                     <BlinkInElement className='headerText'>Blog</BlinkInElement>

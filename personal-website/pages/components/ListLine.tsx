@@ -3,12 +3,7 @@ import Line from "./Line";
 export default function ListLine(props: any) {
 
     return (
-        <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            alignSelf: 'center',
-            marginBlock: 30,
-        }}>
+        <div className='listLine'>
             <Line variant='xSmallV' />
             <Line variant='largeH' />
             <Line variant='xSmallV' />

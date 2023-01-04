@@ -14,7 +14,6 @@ export default function Line(props: any) {
         observer.observe(lineRef.current);
     }, []);
 
-    console.log(styles[props.variant])
 
     return (
         <div

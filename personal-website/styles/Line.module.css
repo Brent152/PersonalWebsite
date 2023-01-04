@@ -63,3 +63,145 @@
     width: 1px;
     height: 0px;
 }
+
+
+/* SMARTPHONES PORTRAIT */
+@media only screen and (min-width: 300px) {
+    .mediumH {
+        width: 8vw;
+    }
+
+    .largeH {
+        width: 82vw;
+    }
+
+    .fullH {
+        width: 90%;
+    }
+
+    .xSmallV {
+        height: 3vh;
+    }
+
+    .smallV {
+        height: 3vh;
+    }
+
+    .mediumV {
+        height: 24vh;
+    }
+}
+
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) {
+    .mediumH {
+        width: 20vw;
+    }
+
+    .largeH {
+        width: 58vw;
+    }
+
+    .fullH {
+        width: 100%;
+    }
+
+    .xSmallV {
+        height: 3vh;
+    }
+
+    .smallV {
+        height: 6vh;
+    }
+
+    .mediumV {
+        width: 1px;
+        height: 42vh;
+    }
+}
+
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) {
+    .mediumH {
+        width: 20vw;
+    }
+
+    .largeH {
+        width: 58vw;
+    }
+
+    .fullH {
+        width: 100%;
+    }
+
+    .xSmallV {
+        height: 3vh;
+    }
+
+    .smallV {
+        height: 6vh;
+    }
+
+    .mediumV {
+        width: 1px;
+        height: 42vh;
+    }
+}
+
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 1024px) {
+    .mediumH {
+        width: 24vw;
+    }
+
+    .largeH {
+        width: 58vw;
+    }
+
+    .fullH {
+        width: 100%;
+    }
+
+    .xSmallV {
+        height: 3vh;
+    }
+
+    .smallV {
+        height: 6vh;
+    }
+
+    .mediumV {
+        width: 1px;
+        height: 42vh;
+    }
+}
+
+
+/* LARGE DESKTOP */
+@media only screen and (min-width: 1760px) {
+    .mediumH {
+        width: 20vw;
+    }
+
+    .largeH {
+        width: 58vw;
+    }
+
+    .fullH {
+        width: 100%;
+    }
+
+    .xSmallV {
+        height: 3vh;
+    }
+
+    .smallV {
+        height: 6vh;
+    }
+
+    .mediumV {
+        width: 1px;
+        height: 42vh;
+    }
+}
