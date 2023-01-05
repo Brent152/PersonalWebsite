@@ -6,7 +6,7 @@ export default function ListItem(props: any) {
         <BlinkInElement>
             <div style={{ display: 'flex' }}>
                 <div className='smallHeaderText'>{props.title}</div>
-                {props.gitHubLink && <GitHubLogo link={props.gitHubLink} style={{ marginLeft: '2%' }} />}
+                {props.gitHubLink && <GitHubLogo link={props.gitHubLink} leftMargin={true} />}
             </div>
             <div className='smallSubheaderText'>
                 {props.subtitle}
