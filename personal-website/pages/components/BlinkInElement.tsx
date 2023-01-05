@@ -19,7 +19,7 @@ export default function BlinkInElement(props: any) {
                 isVisible ? {
                     transition: `all ${props.speedMs ? props.speedMs : 500}ms`,
                     transitionDelay: props.transitionDelay ? props.transitionDelay : '100ms',
-                    ...props.style
+                    ...props.style,
                 } : {
                     transition: `all ${props.speedMs ? props.speedMs : 500}ms`,
                     transitionDelay: props.transitionDelay ? props.transitionDelay : '100ms',

@@ -163,13 +163,13 @@ a {
   }
 
   .landingSection {
-    min-height: 75vh;
+    min-height: 78vh;
 
   }
 
   .landingSectionContainer {
     flex-direction: column;
-    min-height: 50vh;
+    min-height: 56vh;
     justify-content: space-between;
     /* border: solid rgb(0, 30, 255) 4px; */
   }
