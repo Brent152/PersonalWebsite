@@ -1,5 +1,4 @@
 .sectionCollapsed {
-    margin-left: 2vw;
     cursor: default;
     /* border: solid white; */
 }
@@ -38,8 +37,6 @@
     gap: 3vh;
     padding: 2vh 5vh 5vh 5vh;
 
-
-
 }
 
 .menuItem {
@@ -54,6 +51,7 @@
     width: 2vw;
     height: 1px;
     margin-bottom: 1vh;
+    margin-left: 2vw;
 }
 
 .menuLineExpanded {
@@ -68,13 +66,18 @@
 @media only screen and (min-width: 300px) {
 
     .menuLine {
-        width: 2vw;
+        width: 7vw;
         margin-bottom: 1vh;
+        margin-left: 4vw;
     }
 
     .expanded {
-        font-size: 20px;
+        font-size: 30px;
+        -webkit-text-stroke-width: 0px;
+        -webkit-text-stroke-color: rgb(255, 255, 255);
         text-shadow: 0px 0px 0px rgb(255, 255, 255);
+        gap: 2vh;
+        padding: 2vh 3vh 3vh 3vh;
     }
 }
 
@@ -90,8 +93,20 @@
     .expanded {
         font-size: 60px;
         text-shadow: 0px 0px 4px rgb(255, 255, 255);
+        -webkit-text-stroke-width: 0px;
+        -webkit-text-stroke-color: rgb(255, 255, 255);
+        gap: 3vh;
+        padding: 2vh 5vh 5vh 5vh;
     }
+
+    .menuLine {
+        width: 2vw;
+        margin-bottom: 1vh;
+        margin-left: 2vw;
+    }
+
 }
+
 
 
 /* LARGE DESKTOP */

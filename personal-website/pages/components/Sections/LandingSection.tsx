@@ -29,7 +29,7 @@ export default function LandingSesction(props: any) {
 
     return (
         <>
-            <div className='workInProgress'>- WORK IN PROGRESS -</div>
+            {/* <div className='workInProgress'>- WORK IN PROGRESS -</div> */}
             <div className='section landingSection' ref={landingSectionRef}>
                 <SegmentBreak />
 
