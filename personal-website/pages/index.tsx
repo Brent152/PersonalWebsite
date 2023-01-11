@@ -30,7 +30,7 @@ export default function Home() {
       <div style={{
         backgroundColor: 'black'
       }}>
-        <LandingSection handleCollectionClick={handleXDisplayCollectionClick} />
+        <LandingSection handleCollectionClick={handleXDisplayCollectionClick} handleMenuItemClick={handleMenuItemClick} />
         <IntroSection ref={(element: any) => sectionRefs.current['Introduction'] = element} />
         <WorkExperienceSection ref={(element: any) => sectionRefs.current['WorkExperience'] = element} />
         <ProjectsSection ref={(element: any) => sectionRefs.current['Projects'] = element} />
@@ -47,4 +47,9 @@ export default function Home() {
       sectionRefs.current[collection].scrollIntoView({ behavior: 'smooth', block: 'center' })
     }
   }
+
+  function handleMenuItemClick(section: string) {
+    sectionRefs.current[section].scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }
+
 }
