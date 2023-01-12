@@ -35,7 +35,7 @@ export default function LandingSesction(props: any) {
 
 
                 <div>
-                    <NavMenu handleMenuItemClick={props.handleMenuItemClick} />
+                    {/* <NavMenu handleMenuItemClick={props.handleMenuItemClick} /> */}
                     <div className='landingSectionContainer'>
 
 
