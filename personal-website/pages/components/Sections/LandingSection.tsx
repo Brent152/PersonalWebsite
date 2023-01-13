@@ -4,10 +4,22 @@ import { useRef, useState, useEffect } from "react"
 import Line from "../Line"
 import BlinkInElement from "../BlinkInElement"
 import SegmentBreak from "../SegmentBreak"
-import NavMenu from "../NavMenu"
+import NavBar from "../NavBar"
 
 
 export default function LandingSesction(props: any) {
+
+    const [navIsVisible, setNavIsVisible] = useState(false)
+
+    // Move down when nav is visible
+    useEffect(() => {
+        const pageLoadWait = async () => {
+            await new Promise(r => setTimeout(r, 5000))
+            setNavIsVisible(true)
+        }
+        pageLoadWait()
+    }, [])
+
 
     const [viewWidth, setViewWidth] = useState<number | null>(null)
 
@@ -30,12 +42,11 @@ export default function LandingSesction(props: any) {
     return (
         <>
             {/* <div className='workInProgress'>- WORK IN PROGRESS -</div> */}
+            <NavBar handleMenuItemClick={props.handleMenuItemClick} isVisible={navIsVisible} />
             <div className='section landingSection' ref={landingSectionRef}>
                 <SegmentBreak />
 
-
                 <div>
-                    {/* <NavMenu handleMenuItemClick={props.handleMenuItemClick} /> */}
                     <div className='landingSectionContainer'>
 
 

@@ -101,7 +101,7 @@ a {
 }
 
 .landingSection {
-  min-height: 100vh;
+  min-height: 80vh;
   justify-content: space-around;
 }
 
@@ -245,7 +245,7 @@ a {
   }
 
   .landingSection {
-    min-height: 95vh;
+    min-height: 90vh;
   }
 
   .landingSectionContainer {
@@ -254,7 +254,6 @@ a {
     justify-content: center;
     /* border: solid rgb(0, 30, 255) 4px; */
   }
-
 
 }
 
@@ -281,6 +280,10 @@ a {
   .paragraphText {
     font-size: 20px;
     line-height: 1.4em;
+  }
+
+  .landingSection {
+    min-height: 100vh;
   }
 
   .listSection {

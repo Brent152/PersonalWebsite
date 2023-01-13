@@ -7,13 +7,15 @@ type displayItem = {
     collection: string
 }
 
+// Change 'None:Blog' to just 'Blog' when you have a blog
 const inputData: { [key: string]: any }[] =
     [
         {
-            "Blog": "What",
+            // "None:Blog": "What",
+
             "Introduction": "",
-            "Projects": "",
-            "None:1": "xnfal",
+            "Projects": "My",
+            "None:1": "xnfalad",
             "WorkExperience": "",
             "Contact": "",
         },
@@ -21,7 +23,7 @@ const inputData: { [key: string]: any }[] =
             "WorkExperience": "Where",
             "Projects": "",
             "None:1": "q",
-            "Blog": "I",
+            "None:Blog": "I",
             "None:2": "j",
             "Introduction": "",
             "None:3": "s",
@@ -31,8 +33,8 @@ const inputData: { [key: string]: any }[] =
             "Introduction": "",
             "Contact": "Get",
             "None:1": "q",
-            "None:2": "k",
-            "Projects": "Side",
+            "None:2": "ksvha",
+            "Projects": "",
             "Blog": "",
             "WorkExperience": "",
         },
@@ -55,7 +57,7 @@ const inputData: { [key: string]: any }[] =
             "None:1": "d",
             "Projects": "",
             "Introduction": "Me",
-            "Blog": "Write",
+            "None:Blog": "Write",
             "None:2": "c",
             "WorkExperience": "",
             "Contact": "",
@@ -82,15 +84,13 @@ export default function XDisplay(props: any) {
     const [startCycle, setStartCycle] = useState<boolean>(false)
     const [curCycleIndex, setCurCycleIndex] = useState<number>(0)
 
-    const collections = ['Introduction', 'Projects', 'WorkExperience', 'Blog', 'Contact']
+    const collections = ['Introduction', 'Projects', 'WorkExperience', 'Contact'] // Add 'Blog' before contact when you have a blog
 
     const currentlyHoveringRef = useRef(currentlyHovering)
     currentlyHoveringRef.current = currentlyHovering;
 
 
-    useEffect(() => {
 
-    }, [displayRef])
 
     // Wait to start cycle on initial page load
     useEffect(() => {
@@ -130,7 +130,6 @@ export default function XDisplay(props: any) {
 
     return (
         <>
-
             <div className={`${styles.display} ${props.className} `} ref={displayRef}>
                 {data.map((row: displayItem[], index1: number) => {
                     return <div key={index1} className={styles.displayRow + ' '}>

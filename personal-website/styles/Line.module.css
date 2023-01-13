@@ -178,8 +178,8 @@
 }
 
 
-/* LARGE DESKTOP */
-@media only screen and (min-width: 1760px) {
+/* EXTRA LARGE DESKTOP */
+@media only screen and (min-width: 2300px) {
     .mediumH {
         width: 20vw;
     }
@@ -202,6 +202,6 @@
 
     .mediumV {
         width: 1px;
-        height: 42vh;
+        height: 34vh;
     }
 }

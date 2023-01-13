@@ -34,7 +34,7 @@ export default function Home() {
         <IntroSection ref={(element: any) => sectionRefs.current['Introduction'] = element} />
         <WorkExperienceSection ref={(element: any) => sectionRefs.current['WorkExperience'] = element} />
         <ProjectsSection ref={(element: any) => sectionRefs.current['Projects'] = element} />
-        <BlogSection ref={(element: any) => sectionRefs.current['Blog'] = element} />
+        {/* <BlogSection ref={(element: any) => sectionRefs.current['Blog'] = element} /> */}
         <ContactSection ref={(element: any) => sectionRefs.current['Contact'] = element} />
 
       </div>
