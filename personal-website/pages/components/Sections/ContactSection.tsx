@@ -5,6 +5,7 @@ import GitHubLogo from "../GitHubLogo";
 import Line from "../Line";
 import LinkedInLogo from "../LinkedInLogo";
 import SegmentBreak from "../SegmentBreak";
+import styles from '../../../styles/ContactSection.module.css'
 
 
 
@@ -37,12 +38,19 @@ const ContactSection = forwardRef((props, ref: any) => {
                         <BlinkInElement className='paragraphText' style={{ maxWidth: 600, marginTop: '1.5vh' }}>
                             {`If you have any questions or just want to say hi,
                                 please don't hesitate to reach out!`}
+                            <div style={{ height: '1vh' }} />
+                            Brent Julius
                             <br />
                             brentjulius152@gmail.com
-                            <div style={{ height: '1vh' }} />
+                            <div style={{ height: '2vh' }} />
+
+                            <a className={`paragraphText ${styles.downloadButton} `} href='../../../BrentJulius_Resume.pdf' download>Download Resume</a>
+                            <div style={{ height: '1.5vh' }} />
+
                             <LinkedInLogo link={`https://www.linkedin.com/in/brent-julius/`} />
                             <GitHubLogo link={`https://github.com/Brent152`} style={{ marginLeft: 15 }} />
                             <EmailIcon link={`https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSHxwNHtgTHrrdkrwVFWQtPNFjhmKPhFZvdvgXPkMdhGDhztRxxdcDLNLnZMWQJfTRZRSLzh`} style={{ marginLeft: 15 }} />
+
                         </BlinkInElement>
                     </div>
                     <Line variant='mediumV' style={{ marginLeft: 30 }} />
@@ -55,6 +63,8 @@ const ContactSection = forwardRef((props, ref: any) => {
                         <Line variant='mediumH' style={{ marginBlock: 30 }} />
                     </div>
                 </div>
+
+
             </div>
             <SegmentBreak />
 
