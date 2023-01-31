@@ -42,7 +42,7 @@ export default function LandingSesction(props: any) {
     return (
         <>
             {/* <div className='workInProgress'>- WORK IN PROGRESS -</div> */}
-            <NavBar handleMenuItemClick={props.handleMenuItemClick} isVisible={navIsVisible} />
+            {/* <NavBar handleMenuItemClick={props.handleMenuItemClick} isVisible={navIsVisible} /> */}
             <div className='section landingSection' ref={landingSectionRef}>
                 <SegmentBreak />
 
